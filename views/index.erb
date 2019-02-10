@@ -1,0 +1,19 @@
+<html>
+  <head></head>
+  <body>
+    <p>
+      
+    </p>
+    <form>
+	Mot à coder
+	<input type='text' name='string'/>
+	Nombre de décalage
+	<input type='number' name='quantity' min="1" max"100"/>
+	<input type='submit' value='coder' />
+	<input type='submit' value='reset' />
+    </form>
+	<% if(params["quantity"] && params["string"]) %> 
+  		<%=  caesar_cipher(params["string"], params["quantity"].to_i) %>
+  	<% end %>
+  </body>
+</html>
